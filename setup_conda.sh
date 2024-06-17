@@ -4,8 +4,8 @@ if command -v conda &>/dev/null; then
     echo "conda installed"
     exit 0
 else
-    wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py310_24.3.0-0-Linux-x86_64.sh
-    bash Miniconda3-py310_24.3.0-0-Linux-x86_64.sh -b -p $HOME/miniconda3
+    wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py310_24.3.0-0-Linux-x86_64.sh -O Miniconda3.sh
+    bash Miniconda3.sh -b -p $HOME/miniconda3
     source $HOME/miniconda3/etc/profile.d/conda.sh
     conda init
     source ~/.bashrc
