@@ -9,6 +9,7 @@ else
     source $HOME/miniconda3/etc/profile.d/conda.sh
     conda init
     source ~/.bashrc
+    echo "Miniconda installation complete."
 fi
 
 echo "Activating base conda environment..."
@@ -18,6 +19,7 @@ echo "Setting conda show_channel_urls to yes..."
 conda config --set show_channel_urls yes
 
 # 写入 ~/.condarc
+# 将conda源 和 pip源设置为清华源（用于加速）
 echo "Writing to ~/.condarc..."
 cat << EOF > ~/.condarc
 channels:
@@ -43,3 +45,4 @@ echo "Setting pip index-url to https://pypi.tuna.tsinghua.edu.cn/simple..."
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 echo "Configuration completed."
+
