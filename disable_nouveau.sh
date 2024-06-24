@@ -7,6 +7,7 @@ if lsmod | grep -q nouveau; then
     # 更新 initramfs
     sudo update-initramfs -u
     echo "nouveau has been disabled."
+    echo "plz reboot the server."
 else
     echo "nouveau is already disabled."
 fi
