@@ -23,3 +23,12 @@ sudo apt install nvidia-driver-550
 sudo dkms status
 sudo dkms autoinstall
 ```
+
+## pip source
+https://pypi.mirrors.ustc.edu.cn/simple
+
+https://mirrors.cloud.tencent.com/pypi/simple
+
+https://mirrors.aliyun.com/pypi/simple
+
+https://repo.huaweicloud.com/repository/pypi/simple
