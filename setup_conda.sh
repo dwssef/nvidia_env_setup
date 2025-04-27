@@ -9,7 +9,8 @@ ARCH=$(uname -m)
 if [[ "$ARCH" == "aarch64" ]]; then
     MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py311_24.11.1-0-Linux-aarch64.sh"
 else
-    MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py311_24.9.2-0-Linux-x86_64.sh"
+    # MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py311_24.9.2-0-Linux-x86_64.sh"
+    MINICONDA_URL="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 fi
 
 if [[ -f "Miniconda3.sh" ]]; then
@@ -42,5 +43,8 @@ EOF
 
 echo "Setting pip index-url to https://pypi.tuna.tsinghua.edu.cn/simple..."
 pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/simple/
+# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+# pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
 
 echo "Configuration completed."
+rm Miniconda3.sh
